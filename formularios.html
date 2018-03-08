@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+	<meta charset="utf-8">
+	
+  <title> </title>
+	<link rel="stylesheet" type="text/css" href="decorado.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css" />
+
+<style type="text/css">
+
+#frmGuardia, #frmConductor, #frmMulta,  #frmPagarMulta, #frmFechasMulta, #panelMensajes, #frmPestaniaMulta
+{
+  display: none;
+}
+
+
+body{background-color: #D6FEFF}
+
+</style>
+</head>
+<body>
+
+
+<div class="container">
+ <div id= "guardiaCivil">
+	 <!-- Form Name -->
+	<form class= "form-horizontal" name="frmGuardia" id="frmGuardia">
+	<!-- Text input-->
+	<legend>Guardia Civil</legend>
+	<div class="form-group">
+  	   <label class="col-md-4 control-label" for="NIF">NIF</label>  
+    <div class="col-md-4">
+     <input id="nifGuardia" name="nifGuardia" placeholder="NIF" class="form-control input-md" required="" type="text">
+  	</div>
+	</div>
+
+	<!-- Text input-->
+	<div class="form-group">
+  		<label class="col-md-4 control-label" for="Nombre">Nombre</label>  
+  	 <div class="col-md-4">
+  	    <input id="nombreGuardia" name="nombreGuardia" placeholder="Nombre" class="form-control input-md" required="" type="text">
+     </div>
+	</div>
+	<!-- Text input-->
+	<div class="form-group">
+  		<label class="col-md-4 control-label" for="Apellidos">Apellidos</label>  
+  	  <div class="col-md-4">
+  		 <input id="apellidosGuardia" name="apellidosGuardia" placeholder="Apellidos" class="form-control input-md" required="" type="text">
+      </div>
+	</div>
+	<!-- Text input-->
+	<div class="form-group">
+  		 <label class="col-md-4 control-label" for="Dirección">Dirección</label>  
+  	  <div class="col-md-4">
+  		<input id="direcciónGuardia" name="direcciónGuardia" placeholder="Dirección" class="form-control input-md" required="" type="text">
+  	  </div>
+	</div>
+
+	<!-- Text input-->
+	<div class="form-group">
+  	   <label class="col-md-4 control-label" for="Puesto">Puesto</label>  
+  	 <div class="col-md-4">
+  	    <input id="puestoGuardia" name="puestoGuardia" placeholder="Puesto" class="form-control input-md" required="" type="text">   
+  	  </div>
+	</div>
+	<!-- Button -->
+	<div class="form-group">
+  	  <label class="col-md-4 control-label" for="introducirGuardia"></label>
+  	   <div class="col-md-8">
+   		 <input  id="introducirGuardia" name="introducirGuardia" class="btn btn-success" value="Aceptar" onclick="top.frames['menu'].introGuardia();"/>
+   	
+		</div>
+	 </div>
+	  </fieldset>
+	  </form>
+    </div>
+    
+
+
+<div id="conductor">
+<form class="form-horizontal" id="frmConductor" name="frmConductor">
+<fieldset>
+<!-- Form Name -->
+<legend>Conductor</legend>
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="NIF">NIF</label>  
+  <div class="col-md-4">
+  <input id="nifConductor" name="nifConductor" placeholder="NIF" class="form-control input-md" required="" type="text">
+    
+  </div>
+</div>
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="Nombre">Nombre</label>  
+  <div class="col-md-4">
+  <input id="nombreConductor" name="nombreConductor" placeholder="Nombre" class="form-control input-md" required="" type="text">
+  </div>
+</div>
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="Apellidos">Apellidos</label>  
+  <div class="col-md-4">
+  <input id="apellidosConductor" name="apellidosConductor" placeholder="Apellidos" class="form-control input-md" required="" type="text">  
+  </div>
+</div>
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="Dirección">Dirección</label>  
+  <div class="col-md-4">
+  <input id="direcciónConductor" name="direcciónConductor" placeholder="Dirección" class="form-control input-md" required="" type="text">  
+  </div>
+</div>
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="caducidad">Caducidad Carnet</label>  
+  <div class="col-md-4">
+  <input id="caducidadConductor" name="caducidadConductor" placeholder="aaaa/mm/dd" class="form-control input-md" required="" type="text">
+  </div>
+</div>
+<!-- Button  -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="introducirConductor"></label>
+  <div class="col-md-8">
+    <input id="introducirConductor" name="introducirConductor" class="btn btn-success" value="Aceptar" onclick="top.frames['menu'].introCondu();"/>
+   
+ </div>
+</div>
+</fieldset>
+</form>
+</div>
+
+<div id="multas">
+<form class="form-horizontal" id="frmMulta" name="frmMulta">
+<fieldset>
+<!-- Form Name -->
+
+<legend>Multa</legend>
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="idMulta">ID Multa</label>  
+  <div class="col-md-4">
+
+  <input id="idMulta" name="idMulta" placeholder="ID" class="form-control input-md" required="" type="text">
+ 
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="selectNifConductor">NIF Conductor</label>  
+  <div class="col-md-4">
+    <select id="selectNifConductor" name="selectNifConductor" class="form-control">
+    </select>
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="selectNifGuardiar">NIF Guardia</label>  
+  <div class="col-md-4">
+    <select id="selectNifGuardia" name="selectNifGuardia" class="form-control">
+    </select>
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="importe">Importe</label>  
+  <div class="col-md-4">
+  <input id="importe" name="importe" placeholder="importe" class="form-control input-md" required="" type="text">
+  </div>
+</div>
+
+<!-- Multiple Radios -->
+
+  <div class="form-group">
+   <label class="col-md-4 control-label" for="nivelFalta">Nivel de la Falta</label>
+   <div class="col-md-4">
+   <div class="radio">
+     <label for="nivelFalta-0">
+       <input name="nivelFalta" id="nivelFalta" value="1" checked="checked" type="radio" onclick="top.frames['menu'].eleccion();">
+       Leve                                                                                       
+     </label>     
+	 </div>
+   <div class="radio">
+     <label for="nivelFalta-1">
+       <input name="nivelFalta" id="nivelFalta" value="2" type="radio" onclick="top.frames['menu'].eleccion();">
+       Grave
+     </label>
+	</div>
+  </div>
+ </div>
+
+
+<!-- Text input-->
+<div id="descuento">
+<div class="form-group">
+  <label class="col-md-4 control-label" for="selectNifGuardiar">Bonificada</label>  
+  <div class="col-md-4">
+    <select id="bonificacion" name="bonificacion" class="form-control">
+      <option value="1"> Si </option><br>
+      <option value="2"> No </option><br>
+    </select>
+  </div>
+</div>
+</div>
+
+<!-- Text input-->
+<div id="puntos">
+<div class="form-group">
+  <label class="col-md-4 control-label" for="puntos">Puntos</label>  
+  <div class="col-md-4">
+  <input id="puntos" name="puntos" placeholder="Puntos a quitar del carnet por falta grave" class="form-control input-md" required="" type="text">
+  </div>
+</div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="descripcionMulta">Descripción</label>  
+  <div class="col-md-4">
+  <input id="descripcionMulta" name="descripcionMulta" placeholder="Descripción de la multa" class="form-control input-md" required="" type="text">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="fechaMulta">Fecha</label>  
+  <div class="col-md-4">
+  <input id="fechaMulta" name="fechaMulta" placeholder="aaaa/mm/dd" class="form-control input-md" required="" type="text">
+    
+  </div>
+</div>
+
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="introducir"></label>
+  <div class="col-md-8">
+     <input id="introducir" name="introducir" class="btn btn-success"  value="Aceptar" onclick="top.frames['menu'].introMulta();"/>
+  </div>
+</div>
+</fieldset>
+</form>
+</div>
+
+
+<div id="pagarMulta">
+<form class="form-horizontal" id="frmPagarMulta" name="frmPagarMulta">
+<fieldset>
+<!-- Form Name -->
+
+<legend>Pagar multa</legend>
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="selectIdMulta">ID Multa</label>  
+  <div class="col-md-4">
+    <select id="selectIdMulta" name="selectIdMulta" class="form-control">
+    </select>
+  </div>
+</div>
+
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="introducir"></label>
+  <div class="col-md-8">
+     <input id="introducir" name="introducir" class="btn btn-success" value="Aceptar" onclick="top.frames['menu'].introPagarMulta();"/>
+  </div>
+</div>
+</fieldset>
+</form>
+</div>
+
+
+<div id="multasFechas">
+<form class="form-horizontal" id="frmFechasMulta" name="frmFechasMulta">
+<fieldset>
+<!-- Form Name -->
+<legend>Buscar multas desde la primera fecha introducida hasta la segunda introducida</legend>
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="txtFechaIni">Fecha inicial</label>  
+  <div class="col-md-4">
+  <input id="txtFechaIni" name="txtFechaIni" placeholder="aaaa/mm/dd" class="form-control input-md" required="" type="text">  
+  </div>
+</div>
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="txtFechaFin">Fecha final</label>  
+  <div class="col-md-4">
+  <input id="txtFechaFin" name="txtFechaFin" placeholder="aaaa/mm/dd" class="form-control input-md" required="" type="text">  
+  </div>
+</div>
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="introducir"></label>
+  <div class="col-md-8">
+     <input id="introducir" name="introducir" class="btn btn-success" value="Aceptar" onclick="top.frames['menu'].listadoMultaFecha();"/>
+  </div>
+</div>
+
+</fieldset>
+</form>
+</div>
+
+
+
+<div id="pestañaMulta">
+<form class="form-horizontal" id="frmPestaniaMulta" name="frmPestaniaMulta">
+<fieldset>
+<!-- Form Name -->
+
+<legend>Seleccione Multa a imprimir</legend>
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="selectIdMulta2">ID Multa</label>  
+  <div class="col-md-4">
+    <select id="selectIdMulta2" name="selectIdMulta2" class="form-control">
+    </select>
+  </div>
+</div>
+
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="introducir"></label>
+  <div class="col-md-8">
+     <input id="introducir" name="introducir" class="btn btn-success" value="Aceptar" onclick="top.frames['menu'].introimpriMulta();"/>
+  </div>
+</div>
+</fieldset>
+</form>
+</div>
+
+
+
+
+
+
+<div class="panel panel-default" id="panelMensajes">
+  <div class="panel-heading">
+    <h3 class="panel-title">Mensajes</h3>
+  </div>
+  <div class="panel-body" id="divTextoMensaje">
+    <p id="pTextoMensaje"></p>
+    <div class="form-group">
+  <div class="col-md-4">
+    <input type="button" id="btnCerrar" name="btnCerrar" class="btn btn-primary" value="CerrarMensaje" onclick="cerrar();"/>
+  </div>
+</div>
+  </div>
+</div>
+
+
+
+<script type="text/javascript">
+
+function cerrar()
+{
+  document.getElementById("panelMensajes").style.display = "none";
+}
+	
+</script>
+
+
+
+  <script type="text/javascript" src="jquery/jquery-2.2.0.min.js"></script>
+  <script src="css/bootstrap.min.js" type="text/javascript"></script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html><html><head>
+	<meta charset="utf-8">
+	<title> </title>
+	<link rel="stylesheet" href="css/bootstrap.min.css" />
+	 </head>
+	<body>
+	<div class="container">
+  <div class="row">
+	<div class="col-lg-2" style="border: 2px solid black;">
+	   <p> Ministerio del interior</p>
+	   <p> Denuncias automatizadas </p>
+	</div>
+	<div class="col-lg-4 col-lg-offset-1 " style="border: 2px solid black;">
+	   <table class="table table-bordered">
+    	<thead>
+         <tr>
+          <th>FECHA DENUNCIA</th>
+          <th>N EXPEDIENTE</th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr>
+       	 <td>'+this.fechaMulta.toLocaleDateString() +'</td>
+         <td>"+this.idMulta+"</td>
+        </tr>
+        </tbody>
+   	   </table>
+	 </div>
+ <div class="col-lg-4 col-lg-offset-1 " style="border: 2px solid black;">
+	   <table class="table table-bordered">
+    	<thead>
+         <tr>
+          <th colspan="2">Precepto infringido</th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr>
+       	  <td>Articulo 52.1</td>
+       	  <td>Reglamento general de circulación</td>
+       	 </tr>
+        </tbody>
+   	   </table>
+	 </div>
+  </div>
+  <div class="row">
+	<div class="col-lg-7" style="border: 2px solid black;">
+	   <table class="table table-bordered">
+    	<thead>
+         <tr>
+          <th>Lugar denuncia</th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr>
+       	  <td>lugar en la que se ha cometido la infracción</td>
+       	 </tr>
+        </tbody>
+   	   </table>
+	 </div>
+	 <div class="col-lg-4 col-lg-offset-1" style="border: 2px solid black;">
+	   <table class="table table-bordered">
+    	<thead>
+         <tr>
+          <th>Importe total multa</th>
+          <th>Descuento aplicable</th>
+          <th>Pagada</th>
+         </tr>
+        </thead>
+       <tbody>
+         <tr>
+       	  <td>'+this.importe+'</td>
+       	  <td>'+sBonificada+'</td>
+       	  <td>'+sPagada+'</td>
+       	 </tr>
+        </tbody>
+   	   </table>
+	</div>
+  </div>
+	<div class="row">
+  <div class="col-lg-12" style="border: 2px solid black;">
+	   <table class="table table-bordered">
+    	<thead>
+         <tr>
+          <th>hecho que se notifica</th>
+        </tr>
+        </thead>
+        <tbody>
+         <tr>
+       	  <td>'+this.descripcion+'</td>
+       	 </tr>
+        </tbody>
+   	   </table>
+	 </div>
+	</div>
+	<div class="row">
+	<div class="col-lg-5" style="border: 2px solid black;">
+	   <table class="table">
+    	<thead>
+         <tr>
+          <th>Datos Guardia Civil</th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr><td>NIF:</td><td>'+this.oGuardia.nif+'</td></tr>
+       	  <tr><td>Nombre:</td><td>'+this.oGuardia.nombre +'</td></tr>
+       	  <tr><td>Apellidos:</td><td>'+this.oGuardia.apellidos +'</td></tr>
+       	  <tr><td>Puesto:</td><td>'+ this.oGuardia.puesto +'</td></tr>
+       	 </tr>
+        </tbody>
+   	   </table>
+	 </div>
+	<div class="col-lg-5 col-lg-offset-2 " style="border: 2px solid black;">
+	   <table class="table">'+
+    	<thead>
+         <tr>
+          <th>Datos Conductor</th>
+         </tr>
+        </thead>
+        <tbody>
+        <tr><td>NIF:</td><td>'+ this.oConductor.nif +'</td></tr>
+       	 <tr><td>Nombre:</td><td>'+this.oConductor.nombre+'</td></tr>
+       	 <tr><td>Apellidos:</td><td>'+this.oConductor.apellidos+'</td></tr>
+       	 <tr><td>Dirección:</td><td>'+this.oConductor.direccion +'</td></tr>
+        </tbody>
+   	  </table>
+	 </div>
+  </div>
+</div>
+</body>
+</html>
